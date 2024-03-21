@@ -1,0 +1,9 @@
+#!/bin/sh
+ca="ca"
+
+key="$ca.key"
+crt="$ca.crt"
+cnf="$ca.cnf"
+
+# Generate a key and certificate
+openssl req -x509 -newkey rsa:4096 -keyout "$key" -extensions v3_ca -out "$crt" -days 365 -nodes -config "$cnf"

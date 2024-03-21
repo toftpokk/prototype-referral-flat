@@ -1,0 +1,9 @@
+#!/bin/sh
+client="${1:-client}"
+
+key="$client.key"
+csr="$client.csr"
+cnf="$client.cnf"
+
+# Generate a CSR
+openssl req -newkey rsa:4096 -keyout "$key" -out "$csr"  -nodes -config "$cnf"

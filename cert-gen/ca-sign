@@ -1,0 +1,19 @@
+#!/bin/sh
+ca="ca"
+client="${1:-client}"
+
+ca_key="$ca.key"
+ca_crt="$ca.crt"
+ca_serial="$ca.srl"
+client_crt="$client.crt"
+client_csr="$client.csr"
+client_cnf="$client.cnf"
+client_serial="$client.srl"
+
+serial_cmd="-CAserial $ca_serial"
+
+if [ ! -f "$ca_serial" ]; then
+    serial_cmd="-CAcreateserial"
+fi
+
+openssl x509 -req -in "$client_csr" -CA "$ca_crt" -CAkey "$ca_key" -extensions v3_req -out "$client_crt" -extfile "$client_cnf" -days 365 ${serial_cmd}

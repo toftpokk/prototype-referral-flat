@@ -1,0 +1,14 @@
+# Dev
+/cover
+*.test
+test
+
+# Prod
+/data
+/auth
+/his
+NOTES.md
+*.sqlite
+.env
+/build.sh
+/build-client.sh

@@ -1,0 +1,36 @@
+# Not used in application
+ROOT_DIR="/"
+DATA_DIR="${ROOT_DIR}/data"
+
+AUTH_NAME="origin"
+CLIENT_FRONTEND_PORT=8444
+
+# Connection
+SERVER_PORT=8443
+# SERVER_PORT=81
+# SERVER_PATH="https://13.251.122.234"
+SERVER_PATH="https://localhost"
+SERVER_FRONTEND_PORT=8445
+
+# HIS
+HIS_DIR="${ROOT_DIR}/his"
+
+# Identification
+HOSPITAL_ID=1111
+NDID_IDENTIFIER="d"
+
+# Auth
+AUTH_DIR="${ROOT_DIR}/auth"
+KEY_FILE="${AUTH_NAME}.key"
+CERT_FILE="${AUTH_NAME}.crt"
+CA_FILE="ca.crt"
+
+ORIGIN_UPLOAD_DIR="${DATA_DIR}/origin-upload"
+ORIGIN_PAYLOAD_DIR="${DATA_DIR}/origin-payload"
+SERVER_CHUNK_DIR="${DATA_DIR}/server-chunk"
+SERVER_PAYLOAD_DIR="${DATA_DIR}/server-payload"
+DEST_PAYLOAD_DIR="${DATA_DIR}/dest-payload"
+DEST_RESULT_DIR="${DATA_DIR}/dest-result"
+
+CLIENT_DB="${DATA_DIR}/${AUTH_NAME}.sqlite"
+SERVER_DB="${DATA_DIR}/server.sqlite"
