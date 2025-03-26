@@ -92,3 +92,5 @@ Move ceritificates to auth
 Then replace the test data's serial numbers with saved serial numbers (`fillTestData`)
 
 After that download the coherent dataset here https://synthea.mitre.org/downloads and move into `his/`
+
+Patients' citizen ID can be gotten from his data: form '000-00-0000'
